@@ -1,0 +1,104 @@
+@keyframes fadeIn{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    display: flex;
+}
+
+.tabs{
+    border-bottom: 1px solid black;
+}
+
+.tabs ul{
+    display: flex;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.tabs li{
+    list-style-type: none;
+    margin-right: 10px;
+    opacity: .8;
+}
+
+.tabs li:hover{
+    cursor: pointer;
+    color: blue;
+}
+
+.logo{
+    background-image: url('https://media.istockphoto.com/vectors/colorful-icon-vector-id851887036?b=1&k=6&m=851887036&s=612x612&w=0&h=u5HxS1gDp9h4m1LN5OVWchkssxs7i7-ZOkwjVcupc0E=');
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+}
+
+#search-form{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-left: auto;
+}
+
+#search-bar{
+    border:none;
+    border-radius: 10px;
+    background-color: lightgray;
+    text-align: center;
+    height: 35px;
+    width: 100%;
+}
+
+#show-results{
+    display: flex;
+    justify-content: center;
+}
+
+.show-results h2{
+    font-weight: 100;
+    animation: fadeIn 1.5s;
+}
+
+span{
+    font-weight: bold;
+}
+
+#image-divs div{
+    width: 100%;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+
+img{
+    width: 100%;
+    animation: fadeIn 1.5s;
+}
+
+@media only screen and (min-width: 750px){
+    #image-divs{
+        column-count: 2;
+    }
+
+    .tabs ul{
+        justify-content: space-around;
+    }
+
+    #search-form{
+        margin-inline: auto;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1050px){
+    #image-divs{
+        column-count: 3;
+    }
+}
