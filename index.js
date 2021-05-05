@@ -1,4 +1,3 @@
-
 var searchForm = document.getElementById('search-form');
 searchForm.addEventListener('submit', function(e){
     e.preventDefault();
@@ -11,6 +10,10 @@ searchForm.addEventListener('submit', function(e){
             var imageData = res.results.map(function(item){
                 return item;
             })
+
+            var wrapper = document.getElementById('wrapper');
+            wrapper.classList.remove('wrapper-vh')
+
 
             var container = document.getElementById('image-divs');
             container.innerHTML = '';
@@ -32,12 +35,13 @@ searchForm.addEventListener('submit', function(e){
                 `
                 container.appendChild(imageDiv);
             })
+            wrapper.appendChild(resultsContainer);
+            wrapper.appendChild(container);
         }
     };
 
-var textValue = document.getElementById('search-bar').value;
-xhttp.open("GET", `https://api.unsplash.com/search/photos?page=1&query=${textValue}&client_id=58VkTwarYrsNBXEmBb2vMluNRjrK4agI7Rnk9jrBsRY`, true);
+var textValue = document.getElementById('search-bar').value;        
+xhttp.open("GET", `https://api.unsplash.com/search/photos?per_page=30&page=1&query=${textValue}&client_id=58VkTwarYrsNBXEmBb2vMluNRjrK4agI7Rnk9jrBsRY`, true);
 xhttp.setRequestHeader('Authorization', '58VkTwarYrsNBXEmBb2vMluNRjrK4agI7Rnk9jrBsRY');
 xhttp.send();
 })
-

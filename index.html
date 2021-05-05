@@ -6,23 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo API Project</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href='https://css.gg/search.css' rel='stylesheet'>
 </head>
 <body>
-    <div class = "header">
-        <div class = "logo"></div>
-        <form id="search-form">
-            <input id="search-bar" placeholder="Browse Photos" type="text">
-        </form>
+    <div id = "wrapper" class = "wrapper-vh">
+        <div class = "header">
+            <h1>PhotoGallery</h1>
+            <form id="search-form">
+                <input id="search-bar" placeholder="Search Images" type="text">
+                <i class="gg-search"></i>
+            </form>
+        </div>
+        <div id="show-results"></div>
+        <div id="image-divs"></div>
     </div>
-    <div class = "tabs">
-        <ul>
-            <li>Photos</li>
-            <li>Collections</li>
-            <li>Users</li>
-        </ul>
-    </div>
-    <div id="show-results"></div>
-    <div id="image-divs"></div>
     <script src = index.js></script>
 </body>
 </html>

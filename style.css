@@ -8,52 +8,63 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    background-color: #F0F8FF;
+    display: flex;
+    justify-content: center;
+}
+
+#wrapper{
+    background-color: white;
+    width: 85%;
+    margin: auto;
+    border-radius: 15px;
+    position: absolute;
+    top: 50px;
+}
+
+.wrapper-vh{
+    height: 80vh;
+}
+
 .header{
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
 }
 
-.tabs{
-    border-bottom: 1px solid black;
-}
-
-.tabs ul{
-    display: flex;
-    padding: 0;
-    margin-left: 10px;
-}
-
-.tabs li{
-    list-style-type: none;
-    margin-right: 10px;
-    opacity: .8;
-}
-
-.tabs li:hover{
-    cursor: pointer;
-    color: blue;
-}
-
-.logo{
-    background-image: url('https://media.istockphoto.com/vectors/colorful-icon-vector-id851887036?b=1&k=6&m=851887036&s=612x612&w=0&h=u5HxS1gDp9h4m1LN5OVWchkssxs7i7-ZOkwjVcupc0E=');
-    background-size: cover;
-    width: 35px;
-    height: 35px;
+.header h1{
+    font-family:'Pacifico', cursive;
+    font-size: 1rem;
 }
 
 #search-form{
+    width: 80%;
+    margin-inline: auto;
     display: flex;
     justify-content: center;
-    width: 80%;
-    margin-left: auto;
 }
 
 #search-bar{
-    border:none;
-    border-radius: 10px;
-    background-color: lightgray;
-    text-align: center;
+    border: none;
+    border-bottom: 2px solid gray;
+    text-align: left;
     height: 35px;
-    width: 100%;
+    font-size: 12px;
+    width: 60%;
+    background-color: transparent;
+}
+
+#search-bar::placeholder{
+    opacity: .5;
+    color: gray;
+}
+
+.gg-search{
+    top: 15px;
+    left: 10px;
 }
 
 #show-results{
@@ -70,6 +81,17 @@ span{
     font-weight: bold;
 }
 
+#show-results{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+}
+
+#image-divs{
+    width: 95%;
+    margin: auto;
+}
+
 #image-divs div{
     width: 100%;
     margin-bottom: 10px;
@@ -82,7 +104,31 @@ img{
     animation: fadeIn 1.5s;
 }
 
+@media only screen and (min-width: 350px){
+    .header h1{
+        font-size: 2rem;
+    }
+
+    #search-bar{
+        font-size: 20px;
+    }
+}
+
+
 @media only screen and (min-width: 750px){
+    .header{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header h1{
+        padding-left: 40px;
+    }
+
+    #search-bar{
+        width: 100%;
+    }
+
     #image-divs{
         column-count: 2;
     }
@@ -93,12 +139,18 @@ img{
 
     #search-form{
         margin-inline: auto;
-        width: 50%;
+        width: 55%;
     }
 }
 
 @media only screen and (min-width: 1050px){
     #image-divs{
         column-count: 3;
+    }
+}
+
+@media only screen and (min-width: 1550px){
+    #search-form{
+        margin-inline-start: 140px;
     }
 }
